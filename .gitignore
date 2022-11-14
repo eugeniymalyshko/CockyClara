@@ -1,1 +1,3 @@
+.gitignore
 prepros.config
+node_modules

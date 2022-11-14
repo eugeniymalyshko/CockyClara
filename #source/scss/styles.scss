@@ -41,8 +41,15 @@ body {
 }
 /*------------------ Button --------------------*/
 .btn {
+	padding-top: 10px;
 	background-color: inherit;
 	font-size: inherit;
+	// ie 11
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		padding-top: 10px;
+		background-color: transparent;
+		display: block;
+	}
 }
 /*------------------ Page ----------------------*/
 .page {
@@ -165,6 +172,9 @@ body {
 ._more {
 	@media (max-width: 480px) {
 		display: none;
+		@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+			display: none;
+		}
 	}
 }
 //=========================================================================
