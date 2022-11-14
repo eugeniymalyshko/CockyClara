@@ -1,0 +1,1 @@
+"use strict";const buttonMore=document.querySelector(".delivery__paragraph_more"),moreParagraph=document.querySelectorAll("._more");innerWidth<=480?buttonMore.addEventListener("click",(()=>{moreParagraph.forEach((e=>{"block"===e.style.display?e.style.display="none":(e.style.display="block",buttonMore.style.display="none")}))})):buttonMore.style.display="none";

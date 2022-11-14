@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Philosopher&display=swap");
+/*------------------- Reset --------------------*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*------------------ Body ----------------------*/
+body {
+  font-family: "Montserrat";
+  font-size: 18px;
+  font-weight: 400;
+  color: #342c23;
+}
+
+/*----------------- Wrapper --------------------*/
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/*---------------- Container -------------------*/
+._container {
+  max-width: 1200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  ._container {
+    max-width: calc(824px + 376 * ((100vw - 320px) / 880));
+  }
+}
+
+@media (max-width: 1200px) {
+  ._container {
+    padding-left: calc(20px + 80 * ((100vw - 320px) / 880));
+  }
+}
+
+@media (max-width: 1200px) {
+  ._container {
+    padding-right: calc(20px + 80 * ((100vw - 320px) / 880));
+  }
+}
+
+/*------------------ Button --------------------*/
+.btn {
+  background-color: inherit;
+  font-size: inherit;
+}
+
+/*------------------ Page ----------------------*/
+.page {
+  flex: 1 1 auto;
+}
+
+.page__delivery {
+  padding: 30px 0px 75px 0px;
+}
+
+@media (max-width: 768px) {
+  .page__delivery {
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page__delivery {
+    padding: 25px 0px 5px 0px;
+  }
+}
+
+/*---------------- Delivery --------------------*/
+.delivery__breadcrumbs {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 480px) {
+  .delivery__breadcrumbs {
+    display: block;
+  }
+}
+
+.delivery__title {
+  margin: 30px 0px 70px 0px;
+  font-family: "Philosopher";
+  font-size: 48px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #342c23;
+}
+
+@media (max-width: 480px) {
+  .delivery__title_row {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .delivery__title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery__title {
+    margin: 25px 0px 35px 0px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+.delivery__paragraph {
+  line-height: 22px;
+}
+
+.delivery__paragraph:not(:last-child) {
+  margin-bottom: 34px;
+}
+
+.delivery__paragraph_more {
+  color: #bea183;
+  border-bottom: 1px solid #bea183;
+  transition: color 0.3s ease 0s;
+}
+
+@media (any-hover: hover) {
+  .delivery__paragraph_more:hover {
+    cursor: pointer;
+    color: #a6896c;
+    border-bottom: 1px solid #a6896c;
+  }
+}
+
+.delivery__paragraph_more:active {
+  color: #a6896c;
+  border-bottom: 1px solid #a6896c;
+}
+
+@media (max-width: 480px) {
+  .delivery__paragraph_more {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .delivery__paragraph {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/*--------------- Breadcrumbs ------------------*/
+.breadcrumbs__breadcrumb:not(:last-child)::after {
+  padding: 0 10px;
+  content: "/";
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs__breadcrumb {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs__breadcrumb:not(:last-child) {
+    padding-bottom: 10px;
+  }
+}
+
+.breadcrumbs__link {
+  line-height: 22px;
+  color: inherit;
+  transition: color 0.3s ease;
+  color: #bea183;
+}
+
+@media (any-hover: hover) {
+  .breadcrumbs__link:hover {
+    color: #a6896c;
+  }
+}
+
+.breadcrumbs__link:active {
+  color: #a6896c;
+}
+
+@media (max-width: 480px) {
+  ._more {
+    display: none;
+  }
+}
